@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>신고하기</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>이유</label>
+  <textarea name="reason" rows="4" class="form-control mb-2" required></textarea>
+  <button class="btn btn-danger">신고 제출</button>
+</form>
+{% endblock %}

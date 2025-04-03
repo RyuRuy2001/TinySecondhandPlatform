@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>유저 간 메시지 기능 (데모)</h2>
+<p>이 기능은 나중에 Django Channels 또는 쪽지 시스템으로 확장 가능합니다.</p>
+<form method="post">
+  {% csrf_token %}
+  <textarea name="message" rows="4" class="form-control mb-2" placeholder="메시지를 입력하세요..."></textarea>
+  <button class="btn btn-primary">보내기</button>
+</form>
+{% endblock %}

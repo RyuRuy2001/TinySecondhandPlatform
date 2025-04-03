@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>송금 (가상)</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>받는 사람 ID</label>
+  <input type="text" name="receiver" class="form-control mb-2" required>
+  <label>금액</label>
+  <input type="number" name="amount" class="form-control mb-2" required>
+  <button class="btn btn-success">송금</button>
+</form>
+{% endblock %}
